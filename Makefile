@@ -6,8 +6,8 @@ OUTDIR = bin
 CC = x86_64-w64-mingw32-gcc
 LD = $(CC)
 CPPFLAGS =
-CFLAGS   = -Wextra -Wall -Os
-LDFLAGS  = -s
+CFLAGS   = -Wall -Os -Iinclude
+LDFLAGS  = -s -Iinclude -lntdll
 
 RAISEOBJ = ntraise/ntraise.o
 OPENOBJ = openmal/openmal.o
@@ -22,7 +22,7 @@ all: $(BINARIES)
 
 %.exe: %.o
 	@echo LD $<
-	$(CC) $(LDFLAGS) -o $@ $(OBJECTS) $(LDLIBS)
+	$(CC) $(LDFLAGS) -o $@ $< $(LDLIBS)
 	mv $@ $(OUTDIR)
 
 %.o: %.c %.h
