@@ -7,7 +7,8 @@ CC = x86_64-w64-mingw32-gcc
 LD = $(CC)
 CPPFLAGS =
 CFLAGS   = -Wextra -Wall -Os -Iinclude
-LDFLAGS  = --verbose -s -Linclude -lntdll64
+LDFLAGS  = -s -Linclude
+LDLIBS	 = -lntdll64
 
 RAISEOBJ = ntraise/ntraise.o
 OPENOBJ = openmal/openmal.o
