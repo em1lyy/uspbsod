@@ -6,8 +6,8 @@ OUTDIR = bin
 CC = x86_64-w64-mingw32-gcc
 LD = $(CC)
 CPPFLAGS =
-CFLAGS   = -Wall -Os -Iinclude
-LDFLAGS  = -s -Iinclude -lntdll
+CFLAGS   = -Wextra -Wall -Os -Iinclude
+LDFLAGS  = --verbose -s -Linclude -lntdll64
 
 RAISEOBJ = ntraise/ntraise.o
 OPENOBJ = openmal/openmal.o

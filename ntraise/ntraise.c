@@ -1,3 +1,5 @@
+#include "windows.h"
+#include "ntstatus.h"
 #include "ntdll.h"
 
 int main(void) {
