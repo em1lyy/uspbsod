@@ -12,9 +12,11 @@ LDLIBS	 = -lntdll64
 
 RAISEOBJ = ntraise/ntraise.o
 OPENOBJ = openmal/openmal.o
+OPENMINOBJ = openmalmin/openmalmin.o
 
 RAISEBIN = ntraise/ntraise.exe
 OPENBIN = openmal/openmal.exe
+OPENMINBIN = openmalmin/openmalmin.exe
 
 OBJECTS = $(RAISEOBJ) $(OPENOBJ)
 BINARIES = $(RAISEBIN) $(OPENBIN)
