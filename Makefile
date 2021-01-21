@@ -18,8 +18,8 @@ RAISEBIN = ntraise/ntraise.exe
 OPENBIN = openmal/openmal.exe
 OPENMINBIN = openmalmin/openmalmin.exe
 
-OBJECTS = $(RAISEOBJ) $(OPENOBJ)
-BINARIES = $(RAISEBIN) $(OPENBIN)
+OBJECTS = $(RAISEOBJ) $(OPENOBJ) $(OPENMINOBJ)
+BINARIES = $(RAISEBIN) $(OPENBIN) $(OPENMINBIN)
 
 all: $(BINARIES)
 
